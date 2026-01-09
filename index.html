@@ -55,13 +55,15 @@
             flex-wrap: wrap;
         }
 
-        .logo {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, rgba(125, 211, 252, .9), rgba(167, 139, 250, .85));
+        .logo{
+            width:44px;
+            height:44px;
+            border-radius:12px;
+            object-fit:cover;
             box-shadow: var(--shadow);
+            background: transparent;
         }
+
 
         h1 {
             margin: 0;
@@ -180,7 +182,7 @@
 <body>
     <header>
         <div class="brand">
-            <div class="logo" aria-hidden="true"></div>
+            <img src="jammer-400.png" alt="Pocket Jammer app icon" class="logo" />
             <div>
                 <h1>Pocket Jammer</h1>
                 <div class="subtitle">
