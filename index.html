@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Pocket Jammer is a standalone iOS beat maker for instant loop creation, swing groove, and WAV export." />
+    <title>Pocket Jammer — Instant Beat Maker for iOS</title>
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --card: #12141b;
+            --text: #e9ecf1;
+            --muted: #a7b0c0;
+            --accent: #7dd3fc;
+            --border: rgba(255, 255, 255, .08);
+            --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: radial-gradient(1200px 800px at 20% 0%, rgba(125, 211, 252, .18), transparent 60%),
+                radial-gradient(900px 700px at 80% 20%, rgba(167, 139, 250, .14), transparent 55%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.55;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        header {
+            padding: 48px 18px 20px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(125, 211, 252, .9), rgba(167, 139, 250, .85));
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: .2px
+        }
+
+        .subtitle {
+            margin: 10px 0 0;
+            color: var(--muted);
+            max-width: 70ch
+        }
+
+        nav {
+            margin-top: 16px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: var(--muted);
+        }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 18px 18px 60px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 860px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .card {
+            background: rgba(18, 20, 27, .88);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px;
+            backdrop-filter: blur(8px);
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 18px
+        }
+
+        ul {
+            margin: 10px 0 0 20px
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 12px;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+
+        .ctaRow {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, .10);
+            text-decoration: none
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, rgba(125, 211, 252, .25), rgba(167, 139, 250, .22));
+            border-color: rgba(125, 211, 252, .22);
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        footer {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 18px 40px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        code {
+            background: rgba(255, 255, 255, .06);
+            padding: 2px 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+                <h1>Pocket Jammer</h1>
+                <div class="subtitle">
+                    A standalone iOS beat maker for instant loops: tap pads, record into a step sequencer, add swing,
+                    and export a WAV.
+                    No account. No backend. Just jam.
+                </div>
+            </div>
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#howto">How to Use</a>
+            <a href="#export">Export</a>
+            <a href="#support">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <main class="grid">
+        <section class="card" id="features">
+            <h2>What Pocket Jammer does</h2>
+            <p>
+                Pocket Jammer helps you build beats fast. Tap drum pads to trigger sounds, capture your performance into
+                a
+                16-step sequencer loop, and dial in groove with swing.
+            </p>
+
+            <div>
+                <span class="pill">iOS 26+</span>
+                <span class="pill">SwiftUI + AVFoundation</span>
+                <span class="pill">Offline / No backend</span>
+                <span class="pill">WAV export</span>
+            </div>
+
+            <h2 style="margin-top:18px;">Key features</h2>
+            <ul>
+                <li><strong>Pad performance:</strong> instant, responsive drum pads.</li>
+                <li><strong>Step sequencer:</strong> 16 steps per bar with looping playback.</li>
+                <li><strong>Live record:</strong> enable Record to write pad taps into the current step as you play.
+                </li>
+                <li><strong>Swing:</strong> Straight / Groovy / Heavy presets.</li>
+                <li><strong>Patterns:</strong> multiple patterns (A/B/C) with swipe switching.</li>
+                <li><strong>Export:</strong> offline-rendered WAV file you can share anywhere.</li>
+            </ul>
+
+            <div class="ctaRow">
+                <a class="btn primary" href="YOUR_APP_STORE_LINK">View on the App Store</a>
+                <a class="btn" href="privacy.html">Read the Privacy Policy</a>
+            </div>
+
+            <p class="muted" style="margin-top:14px;">
+                Tip: If the App Store link isn’t live yet, you can temporarily link to your GitHub repo or a TestFlight
+                page.
+            </p>
+        </section>
+
+        <aside class="card" id="howto">
+            <h2>Quick Start</h2>
+            <ol class="muted" style="margin:10px 0 0 18px;">
+                <li>Tap <strong>Play</strong> to start the loop.</li>
+                <li>Tap a <strong>pad</strong> to hear a sound immediately.</li>
+                <li>Select an instrument, then tap steps in the lane to program hits.</li>
+                <li>Enable <strong>Record</strong>, then tap pads while playing to write hits into the loop.</li>
+                <li>Tap <strong>Swing</strong> to cycle groove presets.</li>
+                <li>Swipe left/right to switch patterns (A/B/C).</li>
+            </ol>
+
+            <h2 style="margin-top:18px;">Clearing steps</h2>
+            <p class="muted">
+                In the step lane, use the <code>…</code> menu (or long-press the lane) to clear:
+            </p>
+            <ul class="muted">
+                <li><strong>Clear Pad</strong> — clears steps for the selected instrument</li>
+                <li><strong>Clear Pattern</strong> — clears all instruments in the current pattern</li>
+            </ul>
+
+            <h2 id="export" style="margin-top:18px;">Export</h2>
+            <p class="muted">
+                Tap <strong>Export</strong> to render the current pattern to a WAV file offline (not realtime),
+                including swing and volume settings. Then share it using the iOS share sheet.
+            </p>
+            <p class="muted">
+                Note: On iOS Simulator, the share sheet may appear empty due to simulator limitations. Exported files
+                still generate correctly.
+            </p>
+
+            <h2 id="support" style="margin-top:18px;">Support</h2>
+            <p class="muted">
+                Questions, feedback, or bug reports:
+                <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+            </p>
+            <p class="muted">
+                Include your device model, iOS version, and what you were doing when the issue occurred.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <div>
+            © <span id="year"></span> Pocket Jammer. All rights reserved.
+            · <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <script>
+            document.getElementById( "year" ).textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+
+</html>
